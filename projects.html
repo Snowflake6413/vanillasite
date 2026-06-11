@@ -2,24 +2,30 @@
 layout: layout.html
 title: alex's projects!
 projects:
-- title: "Nudgebot"
-description: "A all-in-one Slack bot utility for your personal channels!"
-url: "https://github.com/Snowflake6413/nudgebot"
-tags: ["Python", "Slack", "SQLite"]
+  - title: "Nudgebot"
+    description: "A all-in-one Slack bot utility for your personal channels!"
+    url: "https://github.com/Snowflake6413/nudgebot"
+    tags: ["#Python", "#Slack", "#SQLite"]
+
+  - title: "Vanilla"
+    description: "The site you're viewing right now!"
+    url: "https://github.com/Snowflake6413/vanillasite"
+    tags: ["#HTML+CSS", "#Vanilla", "#Eleventy"]
 ---
+
 <h1>My Projects</h1>
 
 <div class="project-grid">
-    {% for project in projects%}
-    <div class="project-card">
-        <h3>{{ project.title}}</h3>
-        <p> {{project.description}} </p>
-        <div class="tags">
-            {% for tag in project.tags %}
-            <span class="tag">{{ tag }}</span>
-            {% endfor %}
-        </div>
-        <a href="{{ project.url }}" class="project-link" target="_blank" rel="noopener">View Project</a>
+  {% for project in projects%}
+  <div class="project-card">
+    <h3>{{ project.title}}</h3>
+    <p>{{project.description}}</p>
+    <div class="tags">
+      {% for tag in project.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
     </div>
-    {% endfor %}
+    <a href="{{ project.url }}" class="project-link" target="_blank" rel="noopener">View Project</a>
+  </div>
+  {% endfor %}
 </div>
