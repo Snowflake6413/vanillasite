@@ -1,0 +1,62 @@
+body {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 18px;
+    background-color: #b499e0;
+    color: #3d405b;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-left: 0%;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/kirk.ttf");
+}
+
+p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+#froggy {
+    max-width: 800px;
+    margin: 60px auto;
+    overflow-wrap: break-word;
+}
+
+.socials {
+    margin-top: 25px;
+    margin-left: 75%;
+    display: flex;
+    gap: 10px;
+}
+
+.button-corner {
+    margin-top: 30px;
+    padding: 15px;
+    border: 2px dashed #555;
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+.button-corner h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.button-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.socials svg {
+    font-size: 2rem;
+}
