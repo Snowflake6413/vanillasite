@@ -1,0 +1,24 @@
+{
+  "name": "vanilla",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Snowflake6413/vanillasite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Snowflake6413/vanillasite/issues"
+  },
+  "homepage": "https://github.com/Snowflake6413/vanillasite#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}
