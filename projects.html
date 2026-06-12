@@ -2,30 +2,84 @@
 layout: layout.html
 title: alex's projects!
 projects:
-  - title: "Nudgebot"
-    description: "A all-in-one Slack bot utility for your personal channels!"
-    url: "https://github.com/Snowflake6413/nudgebot"
-    tags: ["#Python", "#Slack", "#SQLite"]
+    - title: "Nudgebot"
+      description: "A all-in-one Slack bot utility for your personal channels!"
+      url: "https://github.com/Snowflake6413/nudgebot"
+      tags: ["#Python", "#Slack", "#SQLite", "#Macondo"]
 
-  - title: "Vanilla"
-    description: "The site you're viewing right now!"
-    url: "https://github.com/Snowflake6413/vanillasite"
-    tags: ["#HTML+CSS", "#Vanilla", "#Eleventy"]
+    - title: "VanillaSite"
+      description: "The site you're viewing right now!"
+      url: "https://github.com/Snowflake6413/vanillasite"
+      tags: ["#HTML+CSS", "#Vanilla", "#Eleventy", "#Macondo"]
+
+    - title: "SimpleHub"
+      description: "A USB hub for me, because my laptop's ports suck."
+      url: "https://github.com/Snowflake6413/simplehub"
+      tags: ["#Hardware", "#Macondo"]
+
+    - title: "Sveltesite"
+      description: "An old website of mine, written in Svelte"
+      url: "http://areallyawesomeusername.me/"
+      tags: ["#Svelte", "#Abandoned", "#Flavortown"]
+
+    - title: "Threadsummarizer"
+      description: "A Slack bot that summarizes your threads with AI."
+      url: "https://github.com/Snowflake6413/threadsummarizer"
+      tags: ["#Slack", "#Python", "#Jackpot", "#AI", "#Abandoned"]
+
+    - title: "Symphony"
+      description: "An AI agent in your Slack Workplace."
+      url: "https://github.com/Snowflake6413/symphony"
+      tags:
+          [
+              "#Slack",
+              "#Python",
+              "#AI",
+              "#Conversational",
+              "#Flavortown",
+              "#Abandoned",
+          ]
+
+    - title: "Kudosgiver"
+      description: "A Slack bot that lets you give 'kudos' to your co-workers (or hack clubbers)"
+      url: "https://github.com/Snowflake6413/symphony"
+      tags: ["#Supabase", "#Slack", "#Python", "#Abandoned", "#Flavortown"]
+
+    - title: "Kittenbot"
+      description: "A Slack bot that has a bunch of commands related to kittens and cats. It's also AI powered with a cat personality"
+      url: "https://github.com/Snowflake6413/kittenbot"
+      tags: ["#Slack", "#Python", "#Abandoned", "#AI", "#Meow"]
+
+    - title: "Zoomerbot"
+      description: "Nudgebot's grandpa. This is a channel utility bot for my personal channel."
+      url: "https://github.com/Snowflake6413/zoomerbot"
+      tags: ["#Slack", "#Dummies", "#Python", "#Abandoned"]
+
+    - title: "Personal Website V1"
+      description: "A very old website of mine. Made during Boba Drops (did you know this was my first project in Hack Club?)"
+      url: "https://snowflake6413.github.io/PersonalWebsite/"
+      tags: ["#Boba", "#thisissoold", "#Vanilla", "#Abandoned"]
 ---
 
 <h1>My Projects</h1>
 
 <div class="project-grid">
-  {% for project in projects%}
-  <div class="project-card">
-    <h3>{{ project.title}}</h3>
-    <p>{{project.description}}</p>
-    <div class="tags">
-      {% for tag in project.tags %}
-      <span class="tag">{{ tag }}</span>
-      {% endfor %}
+    {% for project in projects%}
+    <div class="project-card">
+        <h3>{{ project.title}}</h3>
+        <p>{{project.description}}</p>
+        <div class="tags">
+            {% for tag in project.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        <a
+            href="{{ project.url }}"
+            class="project-link"
+            target="_blank"
+            rel="noopener"
+            >View Project</a
+        >
     </div>
-    <a href="{{ project.url }}" class="project-link" target="_blank" rel="noopener">View Project</a>
-  </div>
-  {% endfor %}
+    {% endfor %}
 </div>
