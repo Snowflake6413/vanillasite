@@ -1,0 +1,11 @@
+node_modules
+_site
+.11ty-cache
+.git
+.gitignore
+*.md
+!README.md
+Dockerfile
+docker-compose.yml
+.dockerignore
+.env

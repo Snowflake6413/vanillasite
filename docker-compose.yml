@@ -1,0 +1,19 @@
+services:
+  web:
+    build: .
+    image: vanillasite:latest
+    restart: unless-stopped
+    # No published ports needed: cloudflared reaches it over the internal
+    # docker network. Uncomment to also browse locally at http://localhost:8080
+    # ports:
+    #   - "8080:80"
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      # Set this in a .env file next to this compose file (see .env.example)
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+    depends_on:
+      - web
